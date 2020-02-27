@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+    -ms-overflow-style: scrollbar;
+}
+
+header {
+    padding-bottom: .5vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 180px;
+    height: 12vh;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    padding-left: 30px;
+}
+
+ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #CEA100;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+    bottom: -5px;
+    transform-origin: left;
+}
+
+ul li a.hover:hover::after {
+    transform: scaleX(1);
+}
+
+ul li a.hover:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-box {
+    padding: 8px 23px;
+    font-style: normal;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    border: solid 1.5px #CEA100;
+}
+
+.nav-box:hover {
+    color: #333;
+    background-color: #CEA100;
+    transition-duration: .4s;
+    font-weight: 600;
+}
+
+.nav-box:not(:hover) {
+    transition-duration: .4s;
+}
+
+.jumbotron {
+    background-image: url(img/rajaampat1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.box {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.box .input-box {
+    position: relative;
+}
+
+.box .input-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    letter-spacing: 1px;
+}
+
+.box .input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+
+.box .input-box input:focus~label,
+.box .input-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #CEA100;
+    font-size: 13px;
+}
+
+.box input[type="submit"] {
+    background: transparent;
+    border-bottom: none;
+    outline: none;
+    color: #333;
+    background: #CEA100;
+    padding: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.box input[type="submit"]:hover {
+    background: #997800;
+    transition: .4s;
+    color: #b6b6b6;
+}
+
+.box input[type="submit"]:not(:hover) {
+    transition: .3s;
+}

@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+    -ms-overflow-style: scrollbar;
+}
+
+header {
+    padding-bottom: .5vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 180px;
+    height: 12vh;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    padding-left: 30px;
+}
+
+ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #CEA100;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+    bottom: -5px;
+    transform-origin: left;
+}
+
+ul li a.hover:hover::after {
+    transform: scaleX(1);
+}
+
+ul li a.hover:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.box {
+    padding: 8px 23px;
+    font-style: normal;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    border: solid 1.5px #CEA100;
+}
+
+.box:hover {
+    color: #333;
+    background-color: #CEA100;
+    transition-duration: .4s;
+    font-weight: 600;
+}
+
+.box:not(:hover) {
+    transition-duration: .4s;
+}
+
+.jumbotron {
+    background-image: url(img/rajaampat1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+}
+
+.tittle {
+    text-align: center;
+    transform: translateY(20vh);
+}
+
+.tittle p {
+    font-weight: 600;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    transform: translateY(30vh);
+}
+
+table {
+    border-collapse: collapse;
+    min-width: 75%;
+    max-width: 85%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #ddd;
+}
+
+td {
+    font-weight: 500;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+tr:hover th,
+tr:hover td {
+    color: #252525;
+}
